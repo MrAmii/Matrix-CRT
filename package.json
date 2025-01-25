@@ -1,0 +1,21 @@
+{
+  "name": "matrix-crt-vscode-theme",
+  "displayName": "Matrix CRT",
+  "description": "\"A dark green theme inspired by The Matrix and CRT monitors.\"",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Matrix CRT",
+        "uiTheme": "hc-black",
+        "path": "./themes/Matrix CRT-color-theme.json"
+      }
+    ]
+  }
+}
