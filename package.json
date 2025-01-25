@@ -3,6 +3,11 @@
   "displayName": "Matrix CRT",
   "description": "\"A dark green theme inspired by The Matrix and CRT monitors.\"",
   "version": "0.0.1",
+  "publisher": "MrAmii",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrAmii/Matrix-CRT.git"
+  },
   "engines": {
     "vscode": "^1.96.0"
   },
@@ -12,10 +17,19 @@
   "contributes": {
     "themes": [
       {
-        "label": "Matrix CRT",
-        "uiTheme": "hc-black",
-        "path": "./themes/Matrix CRT-color-theme.json"
+        "label": "Animatrix VSCode Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Animatrix VSCode Theme-color-theme.json"
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "terminal.integrated.cursorBlinking": true
+    }
+  },
+  "keywords": [],
+  "author": "Jason Amy",
+  "license": "CC-BY-NC-4.0",
+  "dependencies": {
+    "punycode": "^2.3.1"
   }
 }
