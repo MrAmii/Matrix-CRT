@@ -17,19 +17,20 @@
   "contributes": {
     "themes": [
       {
-        "label": "Animatrix VSCode Theme",
+        "label": "Matrix CRT",
         "uiTheme": "vs-dark",
-        "path": "./themes/Animatrix VSCode Theme-color-theme.json"
+        "path": "./themes/Matrix CRT-color-theme.json"
       }
     ],
     "configurationDefaults": {
+      "editor.lineNumbers": "relative",
       "terminal.integrated.cursorBlinking": true
+   
     }
   },
+  "icon": "images/icon.png",
   "keywords": [],
   "author": "Jason Amy",
   "license": "CC-BY-NC-4.0",
-  "dependencies": {
-    "punycode": "^2.3.1"
-  }
+  "dependencies": {}
 }
