@@ -1,7 +1,7 @@
 {
   "name": "matrix-crt-vscode-theme",
   "displayName": "Matrix CRT",
-  "description": "\"A dark green theme inspired by The Matrix and CRT monitors.\"",
+  "description": "A neon green against dark green theme inspired by The Matrix and CRT monitors.",
   "version": "0.0.1",
   "publisher": "MrAmii",
   "repository": {
@@ -14,6 +14,21 @@
   "categories": [
     "Themes"
   ],
+  "keywords": [
+    "vscode",
+    "theme",
+    "animatrix",
+    "dark",
+    "green",
+    "matrix",
+    "crt",
+    "neon",
+    "neon Green",
+    "neo",
+    "hacker"
+  ],
+  
+  
   "contributes": {
     "themes": [
       {
@@ -21,16 +36,13 @@
         "uiTheme": "vs-dark",
         "path": "./themes/Matrix CRT-color-theme.json"
       }
-    ],
-    "configurationDefaults": {
-      "editor.lineNumbers": "relative",
-      "terminal.integrated.cursorBlinking": true
-   
-    }
+    ]
+
   },
   "icon": "images/icon.png",
-  "keywords": [],
   "author": "Jason Amy",
   "license": "CC-BY-NC-4.0",
-  "dependencies": {}
+  "dependencies": {
+    "punycode": "^2.1.1"
+  }
 }
