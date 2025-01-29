@@ -1,13 +1,14 @@
+![Example Fullscreen](https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/EXAMPLE2.png) 
 
-![Example Image](images/EXAMPLE1.png) 
+![Example Closeup](https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/EXAMPLE2.png) 
 
-![Example Image](images/EXAMPLE2.png) 
+<a href="https://www.buymeacoffee.com/mramii" target="_blank"><img src="https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/custom_bmac_matrix_button.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-![BMAC_BUTTON](images/custom_bmac_matrix_button.png)
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 
- <a href="https://www.buymeacoffee.com/mramii" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a class="github-button" href="https://github.com/MrAmii" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @MrAmii on GitHub">Follow @MrAmii</a>
 
-
+<a class="github-button" href="https://github.com/MrAmii/Matrix-CRT-vscode-theme" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star MrAmii/Matrix-CRT-vscode-theme on GitHub">Repository</a>
 
 # After installation Guide
 
@@ -15,7 +16,8 @@
 
 - Add the following to your settings.json
 
-``` "editor.lineNumbers": "relative", //Used for navigation with vim, otherwise replace relative with on
+```json 
+    "editor.lineNumbers": "relative", //Used for navigation with vim, otherwise replace relative with on
 
     "editor.fontFamily": "Fira Code, Cascadia Code, Consolas, Courier New, monospace",
     "editor.fontLigatures": true,
@@ -38,17 +40,21 @@
 
 
  
-**(navigate there by pressing Ctrl+Shift+p and typing settings and selecting Preferences: User settings(JSON), then paste the following block in respecting the norms.)**
+- navigate there by entering "The Command Palette" by pressing Ctrl+Shift+p and typing settings and selecting Preferences: User settings(JSON), then paste the following block in respecting the structures already present.
+
+#### You will be using this command often in the future, alternatively if  you click the drop down menu and press >
+*Most fonts should be Fira Code and can be changed by editing the fontFamily*
 
 ## Create glowing text effect
 
-- Install the extension [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)
-- Create a directory (file) named after the extension wherever you would like, I put mine within the Visual Studio Code file within My Documents folderDocuments/Visual Studio Code.
+- Navigate to the extension [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)
+> **WARNING** Read the description and warnings of <u>Costume CSS and JS Loader</u> extension, use at your own risk.
+- Create a directory (folder) named after the extension wherever you would like, I put mine within the Visual Studio Code folder in Documents.
 - Create a new file in VSCode named custom.css and save it there.
 - In the file paste the following.
 - In the file paste the following.
 
-```
+```css
 :root {
     --text-shadow-color: #00ff4034;
 }
@@ -69,17 +75,18 @@
     text-shadow: 0 0 5px var(--text-shadow-color), 0 0 10px var(--text-shadow-color), 0 0 15px var(--text-shadow-color);
 }
 ```
-*******************************************************************************
+
 - Save and then in the settings.json add
-```
+```json
     "vscode_custom_css.imports": [
         "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
     ],
 ```
-**(Or the direction of where you put custom.css)**
+>**Correct these directions to fit your own**
 
-- Now save the file and Hit Ctrl+Shift+p and type Reload custom CSS and JS
-- You should now have glowing text
+- Now save the file and open the Command Palette and type <u>Reload Custom CSS and JS</u>
+
+ *You should now have glowing text*
 
 #### You can edit the effect by changing the variable --text-shadow-color or by increasing the third element of each px, basically wherever you see a number followed by px, that number is what you change. Text shadow allows you to stack multiple shadow effects, so with this logic the smallest one has three stacked making it slightly brighter than the second and third, giving a blooming effect. I prefer a more subtle effect but you may want it brighter.
 
@@ -94,12 +101,13 @@
     C:/Users/{YOURUSERNAME}/.vscode/extensions/mramii.matrix-crt-vscode-theme-0.0.1/images/matrix_crt_1.png
 ```
 
+
 - The name of this extensions folder may be different depending on what version it is currently at
 so just navigate to the extensions folder manually.
 
-- At the bottom left of your screen you will see Background, press that and it will open up the Background extensions menu
+- At the bottom left of your screen you will see Background, press that and it will open up the Background extensions menu. Alternatively you could type <u>Background: Configuration</u> in the command palette.
 
-- Press window
+- Select window
 
 - Select file and navigate to the matrix_crt_1.png
 
@@ -107,7 +115,11 @@ so just navigate to the extensions folder manually.
 
 - Set repeat to repeat and then save
 
-#### You should have a the CRT texture applied to the whole of youw window.(If a problem occures where you cannot update the opacity or you uninstall the addon and the effect persists, hit Ctrl+Shift+P and type Background: Uninstall, addon may need to still be installed to do that but thats as simmple as reinstalling, then trying again)
+- To remove the texture Ctrl+Shift+p and type 
+
+*You should have a the CRT texture applied to the whole of your window.*
+
+> **WARNING: If a problem occurs where you cannot update the opacity or you uninstall the addon and the effect persists, in the command palette type <u>Background: Uninstall</u>  The extension may need to still be installed, if so then reinstall and trying again**
 
 # EXTRA EFFECT
 
@@ -117,17 +129,18 @@ so just navigate to the extensions folder manually.
  
 - Download it or copy paste it into a new index.js that you will place along side the custom.css
 
-- At the top of that script it calls const color, replace that hex code with #008F11. (Ignore the color box, that is automatically applied when a hex color code is detected in your code)
+- At the top of that script it calls const color, replace that hex code with #008F11. (Ignore the color box, it is automatically applied when a hex color code is detected in your code)
  
 - now navigate back to your settings.json and update it to reflect the new file Custom CSS and JS will call on. It will look like this:
-'''
-  "vscode_custom_css.imports": [
-    
+
+```json
+    "vscode_custom_css.imports": [
         "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
         "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/index.js"
     ],
-'''
+```
 
-- Reload Custom CSS and JS, you should now have the cursor effect
+ *Reload Custom CSS and JS, you should now have the cursor effect*
 
-# *Congratulations, you are all set* #
+# *"Welcome to the real world" -Morpheus* #
+
