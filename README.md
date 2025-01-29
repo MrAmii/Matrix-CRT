@@ -1,14 +1,14 @@
-![Example Fullscreen](https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/EXAMPLE2.png) 
+![EXAMPLE1](https://github.com/MrAmii/Matrix-CRT/raw/main/images/EXAMPLE1.png)
 
-![Example Closeup](https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/EXAMPLE2.png) 
+![EXAMPLE2](https://github.com/MrAmii/Matrix-CRT/raw/main/images/EXAMPLE2.png)
 
-<a href="https://www.buymeacoffee.com/mramii" target="_blank"><img src="https://github.com/MrAmii/Matrix-CRT-vscode-theme/blob/main/images/custom_bmac_matrix_button.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+<a href="https://www.buymeacoffee.com/mramii" target="_blank">
+  <img src="https://github.com/MrAmii/Matrix-CRT/raw/main/images/bmc-full-logo-no-background.png" alt="Click Me" style="background-color:rgba(255, 255, 255, 0); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+</a>
 
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-
-<a class="github-button" href="https://github.com/MrAmii" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-size="large" aria-label="Follow @MrAmii on GitHub">Follow @MrAmii</a>
-
-<a class="github-button" href="https://github.com/MrAmii/Matrix-CRT-vscode-theme" data-color-scheme="no-preference: dark; light: dark; dark: dark;" data-icon="octicon-star" data-size="large" aria-label="Star MrAmii/Matrix-CRT-vscode-theme on GitHub">Repository</a>
+<a href="https://github.com/MrAmii" target="_blank">
+  <img src="https://github.com/MrAmii/Matrix-CRT/raw/main/images/GitHub_Logo.png" alt="Click Me" style="background-color:rgba(255, 255, 255, 0); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+</a>
 
 # After installation Guide
 
@@ -143,4 +143,3 @@ so just navigate to the extensions folder manually.
  *Reload Custom CSS and JS, you should now have the cursor effect*
 
 # *"Welcome to the real world" -Morpheus* #
-
