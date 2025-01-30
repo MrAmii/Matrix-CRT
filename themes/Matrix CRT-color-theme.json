@@ -123,7 +123,7 @@
       "name": "Comment Markup Link",
       "scope": "comment markup.link",
       "settings": {
-        "foreground": "#00580a"
+        "foreground": "#de0707"
       }
     },
     {
@@ -1706,7 +1706,7 @@
         "beginning.punctuation.definition.list.markdown.xi"
       ],
       "settings": {
-        "foreground": "#00580a"
+        "foreground": "#de0707"
       }
     },
     {
@@ -1790,7 +1790,7 @@
       "scope": "comment, punctuation.definition.comment",
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#00580a"
+        "foreground": "#de0707"
       }
     },
     {
@@ -2104,7 +2104,7 @@
     "settings.focusedRowBackground": "#ffffff07",
     "walkThrough.embeddedEditorBackground": "#00000050",
     "breadcrumb.activeSelectionForeground": "#00ff41",
-    "editorGutter.commentRangeForeground": "#008f11",
+    "editorGutter.commentRangeForeground": "#de0707",
     "debugExceptionWidget.background": "#001301",
     "debugExceptionWidget.border": "#008f11"
   }
