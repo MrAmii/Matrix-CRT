@@ -2,7 +2,7 @@
   "name": "matrix-crt-vscode-theme",
   "displayName": "Matrix CRT",
   "description": "A neon green against dark green theme inspired by The Matrix and CRT monitors.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "MrAmii",
   "repository": {
     "type": "git",
