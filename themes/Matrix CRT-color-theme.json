@@ -2081,7 +2081,7 @@
     "debugExceptionWidget.background": "#001301",
     "debugExceptionWidget.border": "#008f11",
 		/////////////////////////
-		//SELECTIONS//
+		//SELECTIONS///
 		/////////////////////////
 		"editor.selectionBackground": "#640ba395",
 		"editor.selectionForeground": "#8000ff",
