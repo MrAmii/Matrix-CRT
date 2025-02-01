@@ -3,7 +3,7 @@
 ![EXAMPLE2](https://github.com/MrAmii/Matrix-CRT/raw/main/images/EXAMPLE2.png)
 
 <a href="https://www.buymeacoffee.com/mramii" target="_blank">
-  <img src="https://github.com/MrAmii/Matrix-CRT/raw/main/images/bmc-full-logo-no-background.png" alt="Click Me" style="background-color:rgba(255, 255, 255, 0); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+  <img src="https://github.com/MrAmii/Matrix-CRT/raw/main/images/custom_bmac_matrix_button.png" alt="Click Me" style="background-color:rgba(255, 255, 255, 0); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
 </a>
 
 <a href="https://github.com/MrAmii" target="_blank">
@@ -17,25 +17,27 @@
 - Add the following to your settings.json
 
 ```json 
-    "editor.lineNumbers": "relative", //Used for navigation with vim, otherwise replace relative with on
+	"terminal.integrated.cursorBlinking": true,
+	"editor.lineNumbers": "relative",
 
-    "editor.fontFamily": "Fira Code, Cascadia Code, Consolas, Courier New, monospace",
-    "editor.fontLigatures": true,
-    "editor.fontWeight": "normal",
-    "editor.fontSize": 12.5,
-    "editor.lineHeight": 1.1,
-    "editor.letterSpacing": 1, 
-    "editor.cursorStyle": "line",
-    "editor.cursorWidth": 2,
-    "editor.cursorBlinking": "blink",
-    "editor.renderWhitespace": "selection",
-    "editor.renderControlCharacters": true,
-    "editor.renderLineHighlight": "line",
-    "editor.renderFinalNewline": "dimmed",
+	"editor.fontFamily": "Fira Code, monospace",
+	"terminal.integrated.fontFamily": "Fira Code, monospace",
 
-    "terminal.integrated.fontFamily": "Fira Code, Cascadia Code, Consolas, Courier New, monospace",
-        "terminal.integrated.cursorBlinking": true
-    }
+	"editor.fontLigatures": true,
+	"editor.fontWeight": "normal",
+	"editor.fontSize": 13,
+	"editor.lineHeight": 1,
+	"editor.letterSpacing": 1, 
+	"editor.cursorStyle": "line",
+	"editor.cursorWidth": 2,
+	"editor.cursorBlinking": "blink",
+	"editor.renderWhitespace": "selection",
+	"editor.renderControlCharacters": true,
+	"editor.renderLineHighlight": "line",
+	"editor.renderFinalNewline": "dimmed",
+	
+	"chat.editor.fontFamily": "Fira Code, monospace",
+	"chat.editor.fontSize": 13,
 ```
 
 
@@ -43,9 +45,10 @@
 - navigate there by entering "The Command Palette" by pressing Ctrl+Shift+p and typing settings and selecting Preferences: User settings(JSON), then paste the following block in respecting the structures already present.
 
 #### You will be using this command often in the future, alternatively if  you click the drop down menu and press >
-*Most fonts should be Fira Code and can be changed by editing the fontFamily*
+*There are still aspects that do not have Fira Code font applied yet. The Editor and Terminal should, if not you may need to install [Fira Code](https://github.com/tonsky/FiraCode)*
 
-## Create glowing text effect
+
+## Create glowing text effect and final application of Fira Code
 
 - Navigate to the extension [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)
 > **WARNING** Read the description and warnings of <u>Costume CSS and JS Loader</u> extension, use at your own risk.
@@ -55,31 +58,64 @@
 - In the file paste the following.
 
 ```css
+/* Variable for text shadow color */
 :root {
     --text-shadow-color: #00ff4034;
 }
 
+/* Apply glow effect to all text in the editor */
 .monaco-editor .mtk {
     text-shadow: 0 0 2px var(--text-shadow-color), 0 0 4px var(--text-shadow-color), 0 0 6px var(--text-shadow-color);
 }
 
+/* Apply glow effect to all text in the entire VS Code UI */
 * {
     text-shadow: 0 0 2px var(--text-shadow-color), 0 0 4px var(--text-shadow-color), 0 0 6px var(--text-shadow-color);
 }
 
+/* Reduce glow effect for italic text */
 .monaco-editor .mtk.italic, .monaco-editor .mtki {
     text-shadow: 0 0 2px var(--text-shadow-color), 0 0 5px var(--text-shadow-color);
 }
 
+/* Apply glow effect to pasted text */
 .monaco-editor .mtk.pasted {
     text-shadow: 0 0 5px var(--text-shadow-color), 0 0 10px var(--text-shadow-color), 0 0 15px var(--text-shadow-color);
+}
+
+/* Apply Fira Code font to all text elements except buttons 
+body */
+.monaco-editor, 
+.monaco-editor .mtk, 
+.monaco-menu .action-item .action-label, 
+.monaco-menu .monaco-action-bar .action-item .action-label, 
+.monaco-menu .monaco-action-bar .action-item .keybinding, 
+.monaco-menu .monaco-action-bar .action-item .submenu-indicator, 
+.menubar-menu-button, 
+.explorer-viewlet .monaco-list-row .label-name, 
+.explorer-viewlet .monaco-list-row .label-description, 
+.explorer-viewlet .monaco-list-row .label-details, 
+.chat-view .message, 
+.chat-view .message-content, 
+.chat-view .monaco-editor .view-line {
+    font-family: 'Fira Code', monospace !important;
+}
+
+/* Apply Fira Code font to the status bar */
+.statusbar-item {
+	font-family: 'Fira Code', monospace !important;
+}
+
+/* Apply Fira Code font to the activity bar (search, debug, extensions, source control) */
+.activity-bar .monaco-action-bar .action-item .action-label {
+	font-family: 'Fira Code', monospace !important;
 }
 ```
 
 - Save and then in the settings.json add
 ```json
     "vscode_custom_css.imports": [
-        "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
+        "file:///C:/Users/%USERNAME%/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
     ],
 ```
 >**Correct these directions to fit your own**
@@ -135,11 +171,12 @@ so just navigate to the extensions folder manually.
 
 ```json
     "vscode_custom_css.imports": [
-        "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
-        "file:///C:/Users/{YOURUSERNAME}/Documents/Visual Studio Code/Custom CSS and JS Loader/index.js"
+        "file:///C:/Users/%USERNAME%/Documents/Visual Studio Code/Custom CSS and JS Loader/custom.css"
+        "file:///C:/Users/%USERNAME%/Documents/Visual Studio Code/Custom CSS and JS Loader/index.js"
     ],
 ```
 
  *Reload Custom CSS and JS, you should now have the cursor effect*
+ >**Be sure to leave automatic update ticked, as I wil be working on fine tuning colors and getting the rest of the UI to be uniformly in Fira Code if possible**
 
 # *"Welcome to the real world" -Morpheus* #

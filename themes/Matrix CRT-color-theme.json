@@ -2087,7 +2087,7 @@
 		"editor.selectionForeground": "#8000ff",
 		"terminal.selectionBackground": "#640ba395",
 		"terminal.selectionForeground": "#8000ff",
-		"editor.inactiveSelectionBackground": "#56008f33",
+		"editor.inactiveSelectionBackground": "#56008f5d",
     "editor.selectionHighlightBackground": "#56008f33",
     "editor.selectionHighlightBorder": "#56008f33",
     "editor.findMatchHighlightBackground": "#56008f33",
@@ -2110,8 +2110,9 @@
     "minimap.selectionHighlight": "#640ba395",
     "minimap.errorHighlight": "#68258e",
     "minimap.warningHighlight": "#8000ff",
-    "list.highlightForeground": "#8000ff",
-    "editorSuggestWidget.highlightForeground": "#8000ff",
+    "list.highlightForeground": "#64ef00",
+
+    "editorSuggestWidget.highlightForeground": "#8000ff7e",
 
   }
 }
